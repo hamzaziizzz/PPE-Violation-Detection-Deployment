@@ -5,8 +5,8 @@
 FROM python:3.8-slim-buster
 
 # https://grigorkh.medium.com/fix-tzdata-hangs-docker-image-build-cdb52cc3360d
-#ENV TZ=Asia/Kolkata
-#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ENV TZ=Asia/Kolkata
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR /flask-yolo
 
